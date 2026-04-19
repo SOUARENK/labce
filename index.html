@@ -675,19 +675,26 @@ footer p{font-family:var(--font-m);font-size:.72rem;letter-spacing:.06em;color:v
           <div style="display:flex;flex-direction:column;gap:10px">
             <div class="dl-card">
               <div class="dl-info">
-                <div class="dl-name">📦 Package complet <span class="badge b-amber" style="margin-left:6px">Recommandé</span></div>
+                <div class="dl-name">📦 Package complet <span class="badge b-amber" style="margin-left:6px" data-i18n="dl_rec">Recommandé</span></div>
                 <div class="dl-desc" data-i18n="dl1_desc">Inclut NI-DAQmx 25.8.1 offline + labCE + INSTALLER.bat</div>
               </div>
               <span class="dl-size">≈ 3,3 GB</span>
-              <a class="btn btn-amber" href="labCE_v5.3_Package.zip" download data-i18n="dl_btn">↓ Télécharger</a>
+              <a class="btn btn-amber" id="dl-btn-full" href="#dl-full-info" data-i18n="dl_btn_req">🔗 Lien disponible</a>
+            </div>
+            <div class="dl-card" id="dl-full-info" style="background:var(--amb-dim);border-color:var(--border-a);display:none">
+              <div class="dl-info" style="flex:1">
+                <div class="dl-name" style="margin-bottom:6px" data-i18n="dl1_big_h">⚠️ Fichier trop lourd pour GitHub (3,3 GB)</div>
+                <p style="font-size:.82rem;color:var(--t2);line-height:1.5" data-i18n="dl1_big_p">Ce package inclut NI-DAQmx offline. Uploadez-le sur Google Drive ou OneDrive, puis <strong>contactez votre responsable</strong> pour obtenir le lien direct.</p>
+                <p style="font-size:.78rem;color:var(--t3);margin-top:6px">Si NI-DAQmx est déjà installé sur votre PC → utilisez le <strong>Package léger</strong> ci-dessous.</p>
+              </div>
             </div>
             <div class="dl-card">
               <div class="dl-info">
-                <div class="dl-name">📦 Package léger</div>
+                <div class="dl-name">📦 Package léger <span class="badge b-grn" style="margin-left:6px" data-i18n="dl2_rec">NI-DAQmx requis</span></div>
                 <div class="dl-desc" data-i18n="dl2_desc">NI-DAQmx déjà installé requis — labCE + INSTALLER.bat uniquement</div>
               </div>
               <span class="dl-size">≈ 82 MB</span>
-              <a class="btn btn-ghost" href="labCE_v5.3_FINAL.zip" download data-i18n="dl_btn">↓ Télécharger</a>
+              <a class="btn btn-ghost" href="https://github.com/SOUARENK/labce/releases/download/v5.3/labCE_v5.3_FINAL.zip" data-i18n="dl_btn">↓ Télécharger</a>
             </div>
             <div class="dl-card">
               <div class="dl-info">
@@ -695,7 +702,7 @@ footer p{font-family:var(--font-m);font-size:.72rem;letter-spacing:.06em;color:v
                 <div class="dl-desc" data-i18n="dl3_desc">Code source complet + requirements.txt + build scripts</div>
               </div>
               <span class="dl-size">≈ 126 KB</span>
-              <a class="btn btn-ghost" href="labCE_v5.3_sources.zip" download data-i18n="dl_btn">↓ Télécharger</a>
+              <a class="btn btn-ghost" href="https://github.com/SOUARENK/labce/releases/download/v5.3/labCE_v5.3_sources.zip" data-i18n="dl_btn">↓ Télécharger</a>
             </div>
           </div>
         </div>
