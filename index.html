@@ -1180,7 +1180,11 @@ Lancez l'application depuis le raccourci sur le bureau.</code></div></div>
    Le repo doit contenir les releases avec labCE_app.exe en asset.
    Laissez owner vide ('') pour utiliser version.json en local.
 ──────────────────────────────────────────────────────────────────────────── */
-const GH = { owner: 'SOUARENK', repo: 'labce' };
+const GH = {
+  owner: 'SOUARENK',          // compte GitHub des releases
+  repo: 'labce',               // repo des releases
+  pagesUrl: 'https://labce-app.github.io/' // URL publique du site
+};
 
 /* ─── i18n ─── */
 const T = {
@@ -1703,6 +1707,7 @@ function checkGHConfig(){
 
 /* ─── MOBILE → PC TRANSFER ─── */
 function getMtUrl(){
+  if(GH.pagesUrl) return GH.pagesUrl;
   return GH.owner
     ? `https://${GH.owner.toLowerCase()}.github.io/${GH.repo}/`
     : window.location.href.split('?')[0];
